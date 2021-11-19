@@ -1,0 +1,44 @@
+<div style="height: 100%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="padding-top: 77px;padding-right: 15px;">
+                <h1 class="text-center" style="color: rgb(255,255,255);margin-bottom: 48px;">Shorty</h1>
+                <form action="/shorten" method="POST">
+                    <div class="input-group" style="margin-bottom: 45px;">
+                        <input class="form-control" type="text" name="longUrl" style="margin-left: 0;margin-right: 0;">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit"
+                                style="width: 126px;background-color: rgb(88,68,213);">Shrink
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="table-responsive table-bordered"
+                    style="background-color: #5844d5;color: rgb(255, 255, 255);font-size: 18px; ;">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Full Url</th>
+                                <th>Short Url</th>
+                                <th>Clicks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each allUrl}}
+                                <tr>
+                                    <td><a style="color:white;" href="{{this.longUrl}}"
+                                            target="_blank">{{this.longUrl}}</a>
+                                    </td>
+                                    <td><a style="color:white;" href="{{this.shortUrl}}"
+                                            target="_blank">{{this.shortUrl}}</a>
+                                    </td>
+                                    <td style="color:white;">{{this.clicks}}</td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+POST http://localhost:3000/api/url/shorten
+Content-Type: application/json
+
+{
+    "longUrl": "https://www.amazon.com/Flagship-Dell-PowerEdge-Business-Quad-Core/dp/B07S4FXPNG/ref=sr_1_1?dchild=1&qid=1591266346&s=computers-intl-ship&sr=1-1"
+
+}
